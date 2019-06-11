@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TestBrowser</string>
+    <string name="url_input_hint">input url to enter</string>
+    <string name="enter">Enter</string>
+</resources>

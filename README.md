@@ -38,7 +38,7 @@ params.enabledWallets.add(MeetOne.getsInstance().id);
 
 ## 注入脚本
 
-传入上一步的参数得到脚本，在WebView的**onPageFinished()**方法中注入。
+传入上一步的参数得到脚本，在WebView的**onPageFinished**方法中注入。
 
 ~~~
 final String script = dappxBridge.getScript(params);

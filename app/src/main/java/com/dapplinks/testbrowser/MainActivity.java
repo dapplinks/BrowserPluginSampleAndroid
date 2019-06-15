@@ -1,7 +1,6 @@
 package com.dapplinks.testbrowser;
 
 import android.app.Activity;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
@@ -12,15 +11,6 @@ import android.widget.EditText;
 
 import com.linkto.dappxsdk.DappxBridge;
 import com.linkto.dappxsdk.params.SelectParams;
-import com.linkto.dappxsdk.wallet.MeetOne;
-import com.linkto.dappxsdk.wallet.TokenPocket;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 
 public class MainActivity extends Activity {
     private EditText mEtUrl;
@@ -70,8 +60,9 @@ public class MainActivity extends Activity {
         params.appName = "Sample Test";
         params.appIcon = "http://download.dappx.com/static/assets/images/appicon.png";
 
-        params.enabledWallets.add(TokenPocket.getsInstance().id);
-        params.enabledWallets.add(MeetOne.getsInstance().id);
+        // 如果只想显示部分钱包，就添加类似下面的代码：
+//        params.enabledWallets.add(TokenPocket.getsInstance().id);
+//        params.enabledWallets.add(MeetOne.getsInstance().id);
 
         final String script = dappxBridge.getScript(params);
 
